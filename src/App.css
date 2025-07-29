@@ -4,134 +4,150 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: #f9fafb;
+  color: #1f2937;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .todo-app-container {
   min-height: 100vh;
-  padding: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem 1rem;
   background: #f3f4f6;
 }
 
 .todo-app {
-  margin: auto;
-  margin-top: 30px;
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
   padding: 2rem;
-  background: white;
-  border-radius: 0.25rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  max-width: 32rem;
-  color: #374151;
+  width: 100%;
+  max-width: 500px;
+  transition: all 0.3s ease;
 }
 
 h2 {
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 .todo-input {
   width: 100%;
-  border: none;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  padding: 14px;
-  font-size: 16px;
-  margin-top: 16px;
+  padding: 0.875rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.todo-input:focus {
+  border-color: #3b82f6;
 }
 
 .todo-list {
-  margin-top: 32px;
+  margin-top: 2rem;
 }
 
 .todo-item-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 24px;
+  margin-top: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .todo-item {
   display: flex;
   align-items: center;
   flex: 1;
-  font-size: 18px;
-  margin-right: 24px;
+  font-size: 1rem;
+  color: #374151;
 }
 
 .todo-item-label {
-  margin-left: 16px;
+  margin-left: 0.75rem;
 }
 
 .todo-item-input {
-  margin-left: 8px;
+  margin-left: 0.75rem;
   width: 100%;
-  border: none;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  padding: 8px;
-  font-size: 18px;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  outline: none;
+}
+
+.todo-item-input:focus {
+  border-color: #3b82f6;
 }
 
 .line-through {
   text-decoration: line-through;
+  color: #9ca3af;
 }
 
 .x-button {
-  background: white;
-  color: #6B7280;
+  background: transparent;
+  color: #9ca3af;
   border: none;
   cursor: pointer;
+  transition: color 0.2s;
 }
 
 .x-button:hover {
-  color: #1F2937;
+  color: #ef4444;
 }
 
 .x-button-icon {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .button {
-  color: #6B7280;
-  font-size: 14px;
+  font-size: 0.875rem;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
   background: white;
-  border: 1px solid lightgray;
-  padding: 6px;
-  border-radius: 5px;
+  color: #374151;
   cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
 }
 
 .button:hover {
-  border: 1px solid lightgray;
+  background: #f9fafb;
+  border-color: #9ca3af;
 }
 
 .filter-button {
-  border: 1px solid white;
+  border: 1px solid transparent;
 }
 
 .filter-button-active {
-  border: 1px solid lightgray;
+  border-color: #3b82f6;
+  color: #3b82f6;
+  background: #e0f2fe;
 }
 
-.check-all-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #6B7280;
-  margin-top: 22px;
-  padding-top: 16px;
-  border-top: 1px solid lightgray;
-}
-
+.check-all-container,
 .other-buttons-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #6B7280;
-  margin-top: 22px;
-  padding-top: 16px;
-  border-top: 1px solid lightgray;
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #e5e7eb;
+  font-size: 0.875rem;
+  color: #6b7280;
 }
