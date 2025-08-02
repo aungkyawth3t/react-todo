@@ -1,8 +1,9 @@
 import React from 'react'
 
-export default function Todo({todo, deleteTodo}) {
+export default function Todo({ todo, deleteTodo }) {
+    
     return (
-        <li className="todo-item-container" key={todo.id}>
+        <li className="todo-item-container">
             <div className="todo-item">
                 <input type="checkbox" />
                     <span className={`todo-item-label ${todo.completed ? 'line-through' : ''}`}>

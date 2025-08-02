@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 export default function TodoForm({addToDo}) {
 
   let [title, setTitle] = useState('');
+  
   let handleSubmit = (e) => {
     e.preventDefault();
     let newToDo = {
