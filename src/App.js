@@ -61,6 +61,20 @@ function App() {
     });
   }
 
+  let checkAll = () => {
+    todos.forEach(t => {
+      t.completed = true;
+      updateToDo(t);
+    });
+    setTodos((prevState) => {
+      return prevState.map(t => {
+        return { ...t, completed: true }
+      })
+    })
+  }
+
+  let remainingTodos = todos.filter(t => !t.completed).length;
+
   return (
     <div className="todo-app-container">
       <div className="todo-app">
@@ -68,7 +82,7 @@ function App() {
 
         <TodoForm addToDo={addToDo} />
         <TodoList todos={todos} deleteTodo={deleteTodo} updateToDo={updateToDo} />
-        <CheckAllAndRemaining />
+        <CheckAllAndRemaining remainingTodos={remainingTodos} checkAll={checkAll} />
 
         {/* TodoFilter */}
         <div className="other-buttons-container">
