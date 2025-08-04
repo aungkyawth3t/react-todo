@@ -66,6 +66,7 @@ function App() {
       t.completed = true;
       updateToDo(t);
     });
+    //client side
     setTodos((prevState) => {
       return prevState.map(t => {
         return { ...t, completed: true }
