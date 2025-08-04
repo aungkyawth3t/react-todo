@@ -1,23 +1,8 @@
 {
   "todos": [
     {
-      "id": 0.6008700725709281,
+      "id": "0.6008700725709281",
       "title": "new to do ",
-      "completed": false
-    },
-    {
-      "id": 0.4411989058435696,
-      "title": "learn react ",
-      "completed": true
-    },
-    {
-      "id": 0.12025852960090355,
-      "title": "laravel project ",
-      "completed": false
-    },
-    {
-      "id": 0.2910360868372972,
-      "title": "todo ",
       "completed": false
     }
   ]
