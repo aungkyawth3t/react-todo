@@ -3,6 +3,16 @@
     {
       "id": "0.6008700725709281",
       "title": "new to do ",
+      "completed": true
+    },
+    {
+      "id": 0.6300115393256421,
+      "title": "learn react ",
+      "completed": false
+    },
+    {
+      "id": 0.3544064496420102,
+      "title": "another task ",
       "completed": false
     }
   ]
