@@ -56,6 +56,7 @@ function App() {
 
   let updateToDo = (todo) => {
     // server side 
+    console.log(todo);
     fetch(`http://localhost:3001/todos/${todo.id}`, {
       method: "PATCH",
       headers: {

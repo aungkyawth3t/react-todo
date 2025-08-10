@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 
-export default function TodoForm({addToDo}) {
+export default function TodoForm({ addToDo }) {
 
   let [title, setTitle] = useState('');
-  
+
   let handleSubmit = (e) => {
     e.preventDefault();
     let newToDo = {
-      id: Math.random(),
+      id: Math.random().toString(),
       title: title,
       completed: false
     }
@@ -16,13 +16,13 @@ export default function TodoForm({addToDo}) {
   }
   return (
     <form action="#" onSubmit={handleSubmit}>
-        <input
+      <input
         type="text"
         className="todo-input"
         placeholder="What do you need to do?"
         onChange={e => setTitle(e.target.value)}
         value={title}
-        />
+      />
     </form>
   )
 }
